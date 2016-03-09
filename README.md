@@ -81,8 +81,8 @@ import {require} from 'ember-cli-fastboot-addon';
 
 export default function(url) {
   // https://github.com/mzabriskie/axios
-  const axiom = require('axiom');
-  return axiom({
+  const axios = require('axios');
+  return axios({
     url: url,
     responseType: 'json'
   });
