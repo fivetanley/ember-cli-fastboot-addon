@@ -6,13 +6,13 @@ var Addon = require('ember-cli/lib/models/addon');
 module.exports = Addon.extend({
   name: 'ember-cli-fastboot-addon',
 
-  //treeForAddon: function(tree) {
-    //return this._super.treeForAddon.call(this, fastbootTree(tree));
-  //},
+  treeForAddon: function(tree) {
+    return this._super.treeForAddon.call(this, fastbootTree(tree));
+  },
 
-  //treeForApp: function(tree) {
-    //return fastbootTree(tree);
-  //}
+  treeForApp: function(tree) {
+    return fastbootTree(tree);
+  }
 });
 
 module.exports.fastbootTree = fastbootTree;
